@@ -1,6 +1,9 @@
 import java.util.*;
 import java.io.*;
 
+
+// 단어의 개수
+
 class bronze2_1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -11,6 +14,8 @@ class bronze2_1 {
         System.out.println(result.size());
     }
 }
+
+// 빠른 A+B
 
 class bronze2_2 {
     public static void main(String[] args) throws IOException{
@@ -37,6 +42,7 @@ class bronze2_2 {
     }
 }
 
+// 최댓값
 class bronze2_4 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -61,6 +67,8 @@ class bronze2_4 {
     }
 }
 
+
+//숫자의 개수
 public class bronze2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

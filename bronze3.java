@@ -16,7 +16,7 @@ class bronze3_1 {
 
 class bronze3_2 {
     public static void main(String[] args) {
-        for (int k = 0; k < 10; k++) {
+        for (int k = 0; k < 5; k++) {
             Scanner sc = new Scanner(System.in);
             int i = sc.nextInt();
             int j = sc.nextInt();
