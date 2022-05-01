@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public class jw_bronze_2 {
 
     /* 1152 *****
@@ -118,4 +121,114 @@ public class jw_bronze_2 {
         }
     }
      */
+
+//    10808 알파벳 개수
+//    public static void main(String[] args) throws IOException {
+//        InputStream in = System.in;
+//        InputStreamReader reader = new InputStreamReader(in);
+//        BufferedReader br = new BufferedReader(reader);
+//        String a = br.readLine();
+//        int[] C = new int[26];
+//        for (int i=0; i<a.length(); i++){
+//            char b = a.charAt(i);
+//            for (int j=97; j<=122; j++){
+//                if ((int)b == j){
+//                    C[j-97] += 1;
+//                }
+//            }
+//        }
+//        String str = Arrays.toString(C).replaceAll(",", "");
+//        String str2 = str.substring(1,str.length()-1);
+//        String A = str2.replaceAll("[^0-9]"," ");
+//        System.out.print(A);
+//    }
+
+
+//    2743 단어 길이 재기
+//    public static void main(String[] args) throws IOException{
+//        InputStream in = System.in;
+//        InputStreamReader reader = new InputStreamReader(in);
+//        BufferedReader br = new BufferedReader(reader);
+//        String a = br.readLine();
+//
+//        System.out.print(a.length());
+//    }
+
+
+//    2902 KMP는 왜 KMP일까?
+//    public static void main(String[] args) throws IOException {
+//        InputStream in = System.in;
+//        InputStreamReader reader = new InputStreamReader(in);
+//        BufferedReader br = new BufferedReader(reader);
+//        String a = br.readLine();
+//        String[] A = new String[a.length()];
+//        for (int j = 0; j < a.length(); j++) {
+//            A[j] = String.valueOf(a.charAt(j));
+//        }
+//        System.out.print(A[0]);
+//        for (int i = 0; i < a.length(); i++) {
+//            if (A[i].equals("-")) {
+//                System.out.print(A[i + 1]);
+//            }
+//        }
+//    }
+
+
+//    10987 모음의 개수
+//    public static void main(String[] args) throws IOException {
+//        InputStream in = System.in;
+//        InputStreamReader reader = new InputStreamReader(in);
+//        BufferedReader br = new BufferedReader(reader);
+//        String a = br.readLine();
+//        String[] A = new String[a.length()];
+//        for (int j = 0; j < a.length(); j++) {
+//            A[j] = String.valueOf(a.charAt(j));
+//        }
+//
+//        int count = 0;
+//        for (int i = 0; i < a.length(); i++) {
+//            if (A[i].equals("a")) {
+//                count++;
+//            }
+//            else if (A[i].equals("e")){
+//                count++;
+//            }
+//            else if (A[i].equals("i")){
+//                count++;
+//            }
+//            else if (A[i].equals("o")){
+//                count++;
+//            }
+//            else if (A[i].equals("u")){
+//                count++;
+//            }
+//            else{
+//                continue;
+//            }
+//
+//        }
+//        System.out.print(count);
+//    }
+
+//    1673 치킨 쿠폰 *****
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int count = 0;
+//         while (sc.hasNextInt()){
+//            int a = sc.nextInt();
+//            int b = sc.nextInt();
+//            count = a;
+//            if (a==0 && b==0) {
+//                break;
+//            }
+//            else {
+//                while (a >= b) {
+//                count += (a/b);
+//                a = (a/b);
+//            }
+//            System.out.print(count);
+//            }
+//        }
+//    }
+//}
 }
