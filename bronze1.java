@@ -1,7 +1,7 @@
 package gangcoding;
 import java.util.*;
 
-//1110번 더하기 
+//1110번 더하기사이클
 class bronze1_1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -31,7 +31,7 @@ class bronze1_1 {
 }
 
 
-// 1193번 
+// 1193번 분수찾기
 class bronze1_2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
