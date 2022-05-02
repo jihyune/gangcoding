@@ -1,5 +1,7 @@
+package gangcoding;
 import java.util.*;
 
+//1110번
 class bronze1_1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -54,8 +56,47 @@ class bronze1_2 {
 public class bronze1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        String word = sc.next();
-        word.toUppercase();
+        String word = sc.nextLine();
+        String words = word.toUpperCase();
+        ArrayList<Character> alphabets = new ArrayList<>();
+        for (int i=0; i<words.length(); i++){
+            alphabets.add(words.charAt(i));
+        }
+
+        ArrayList<Integer> totalnum = new ArrayList<>();
+
+        for (int j=65; j<=90; j++){
+            int count = 0;
+            for (int k=0; k< alphabets.size(); k++){
+                int n = alphabets.get(k);
+                if (j == n){
+                    count += 1;
+                }
+            }
+            totalnum.add(count);
+
+        }
+
+        ArrayList<Integer> sorting = (ArrayList<Integer>) totalnum.clone();
+        sorting.sort(Comparator.reverseOrder());
+
+        if(sorting.get(0) == sorting.get(1)){
+            System.out.println("?");
+        } else {
+            int result = sorting.get(0);
+            int index = 1;
+            for (int p=0; p< totalnum.size(); p++){
+                if (result == totalnum.get(p)){
+                    break;
+                } else {
+                    index += 1;
+                }
+            }
+            int r = index + 64;
+            char answer = (char) r;
+            System.out.println(answer);
+        }
+
 
 
     }
