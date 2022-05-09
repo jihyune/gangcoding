@@ -53,7 +53,7 @@ class bronze1_2 {
     }
 }
 
-public class bronze1 {
+class bronze1_3 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String word = sc.nextLine();
@@ -80,7 +80,7 @@ public class bronze1 {
         ArrayList<Integer> sorting = (ArrayList<Integer>) totalnum.clone();
         sorting.sort(Comparator.reverseOrder());
 
-        if(sorting.get(0) == sorting.get(1)){
+        if(sorting.get(0).equals(sorting.get(1))){
             System.out.println("?");
         } else {
             int result = sorting.get(0);
@@ -98,6 +98,137 @@ public class bronze1 {
         }
 
 
+
+    }
+}
+
+// 2750번 수 정렬하기
+class bronze1_4 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int lists = sc.nextInt();
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        for (int j=0; j<lists; j++){
+            int num = sc.nextInt();
+            numbers.add(num);
+        }
+        numbers.sort(Comparator.naturalOrder());
+
+        for (int k=0; k< numbers.size(); k++){
+            System.out.println(numbers.get(k));
+        }
+    }
+}
+
+// 2775번 부녀회장이 될테야
+class bronze1_5 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int tries = sc.nextInt();
+
+        for (int i=0; i<tries; i++){
+            int line = sc.nextInt();
+            int room = sc.nextInt();
+            int[] people = new int[room];
+
+            for (int j=1; j<=room; j++){
+                people[j-1] = j;
+            }
+
+            ArrayList<int[]> array = new ArrayList<>();
+            array.add(people);
+
+            for (int k=0; k<line-1; k++){
+                int[] upstair = new int[room];
+                for (int p=0; p<room; p++){
+                    upstair[p] = 0;
+                    for (int q=0; q<=p; q++){
+                        upstair[p] += array.get(k)[q];
+                    }
+                }
+                array.add(upstair);
+
+            }
+            int result = 0;
+            for (int q=0; q<room; q++){
+                result += array.get(line-1)[q];
+            }
+
+            System.out.println(result);
+        }
+    }
+}
+
+// 11719번 그대로 출력하기 2
+class bronze1_6 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> result = new ArrayList<>();
+        while(sc.hasNextLine()){
+            result.add(sc.nextLine());
+        }
+
+        for (int i=0; i<result.size(); i++){
+            System.out.println(result.get(i));
+        }
+
+    }
+}
+
+// 11050번 이항 계수 1
+class bronze1_7 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        if(m == 0){
+            System.out.print(1);
+        } else {
+            int up = n;
+            int down = 1;
+            for (int i=1; i<m; i++){
+                up *= (n-i);
+            }
+            for (int j=1; j<=m; j++){
+                down *= (j);
+            }
+
+            System.out.print(up/down);
+        }
+    }
+}
+
+// 1977번 완전 제곱수
+public class bronze1 {
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        ArrayList<Integer> num = new ArrayList<>();
+
+        for (int i=1; i<=100; i++){
+            for (int j=n; j<=m; j++){
+                if (j == i*i){
+                    num.add(j);
+                }
+            }
+        }
+
+        if (num.size() == 0){
+            System.out.print(-1);
+        } else {
+            int result = 0;
+            for (int k=0; k<num.size(); k++){
+                result += num.get(k);
+            }
+
+            System.out.println(result);
+            System.out.println(num.get(0));
+        }
 
     }
 }

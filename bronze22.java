@@ -129,7 +129,7 @@ class bronze22_4 {
 }
 
 // 11721번 열개씩 끊어 출력하기
-public class bronze22 {
+class bronze22_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String words = sc.nextLine();
@@ -142,4 +142,21 @@ public class bronze22 {
 
         }
     }
+}
+
+public class bronze22{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            int count = 0;
+            while (sc.hasNextInt()) {
+                int a = sc.nextInt();
+                int b = sc.nextInt();
+                count = a;
+                while (a >= b) {
+                    count += (a / b);
+                    a = (a / b) + (a % b);
+                }
+                System.out.println(count);
+            }
+        }
 }
