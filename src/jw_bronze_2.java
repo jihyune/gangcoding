@@ -2,26 +2,26 @@ import java.util.*;
 import java.io.*;
 
 public class jw_bronze_2 {
+//
+//    1152 *****
 
-    /* 1152 *****
-        import java.util.Scanner;
+//        public static void main(String[] args){
+//            Scanner sc = new Scanner(System.in);
+//            String n = sc.nextLine();
+//            String t = n.trim();
+//            String[] num = t.split(" ");
+//            int a = num.length;
+//            if (t.length() == 0){
+//                System.out.print("0");
+//            } else{
+//                System.out.print(a);
+//            }
+//        }
 
-    public class bj_bronze_2_1 {
-        public static void main(String[] args){
-            Scanner sc = new Scanner(System.in);
-            String n = sc.nextLine();
-            String t = n.trim();
-            String[] num = t.split(" ");
-            int a = num.length;
-                System.out.print(a);
-        }
-    }
-     */
 
-    /* 2562 *****
-        import java.util.Scanner;
 
-    public class bj_bronze_2_2 {
+//    2562 *****
+
         public static void main(String[] args){
                 Scanner sc = new Scanner(System.in);
                 int[] arr = {sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt()};
@@ -41,8 +41,8 @@ public class jw_bronze_2 {
             System.out.println(max);
             System.out.print(num);
         }
-    }
-     */
+
+
 
     /* 8958
         import java.util.Scanner;
@@ -224,11 +224,10 @@ public class jw_bronze_2 {
 //            else {
 //                while (a >= b) {
 //                count += (a/b);
-//                a = (a/b);
+//                a = (a/b) + (a%b);
 //            }
-//            System.out.print(count);
+//            System.out.println(count);
 //            }
 //        }
 //    }
-//}
 }
