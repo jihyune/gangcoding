@@ -1,3 +1,4 @@
+package gangcoding;
 //2562 최댓값//
 
 //import java.util.Scanner;
@@ -73,58 +74,28 @@
 //}
 
 //8958 OX퀴즈//
-//import java.util.Scanner;
-//
-//public class Main {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//
-//        int n = sc.nextInt();
-//        sc.nextLine();
-//
-//        for (int k = 0; k < n; k++) {
-//            String[] quiz = sc.nextLine().split("X");
-//
-//            int sum = 0;
-//
-//            for (int i = 0; i < quiz.length; i++) {
-//                int len = quiz[i].length();
-//
-//                for (int j = 0; j < len; j++) {
-//                    sum += j + 1;
-//                }
-//            }
-//            System.out.println(sum);
-//        }
-//    }
-//}
-
-//10809 알파벳 찾기//
-
 import java.util.Scanner;
 
 public class bronze2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.nextLine();
-        System.out.println(str);
+        int n = sc.nextInt();
+        sc.nextLine();
 
-        for (int i = 0; i < 26; i++) {
+        for (int k = 0; k < n; k++) {
+            String[] quiz = sc.nextLine().split("X");
 
-            int asc = 97 + i;
-            char ch = (char) asc;
-            String s = Character.toString(ch);
-            System.out.println(s);
+            int sum = 0;
 
-            for (int j = 0; j < str.length(); j++) {
-                if (s.equals(str.substring(j, j + 1))) {
-                    System.out.print(j + " ");
-                } else {
-                    System.out.print(-1 + " ");
+            for (int i = 0; i < quiz.length; i++) {
+                int len = quiz[i].length();
+
+                for (int j = 0; j < len; j++) {
+                    sum += j + 1;
                 }
             }
-
+            System.out.println(sum);
         }
     }
 }

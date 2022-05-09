@@ -7,7 +7,7 @@ package gangcoding;
 //}
 
 
-//1152 단어의 개수//
+//1157 단어 공부//
 //import java.util.Scanner;
 //
 //public class bronze1 {
@@ -59,7 +59,6 @@ package gangcoding;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class bronze1 {
 
@@ -69,23 +68,22 @@ public class bronze1 {
         int n = sc.nextInt();
 
         ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(n);
+        int m = n;
 
         while(true) {
-            for (Integer num : arr) {
-//                System.out.print(num);
-                int num1 = num / 10;
-                int num2 = num % 10;
+                int num1 = n / 10;
+                int num2 = n % 10;
 
                 int sum = num1 + num2;
                 int newNum = sum % 10 + num2*10;
 
-//                System.out.print(newNum);
-                if(newNum != n){
-                    arr.add(newNum);
+                arr.add(newNum);
+
+                if(newNum == m){
+                    break;
                 }
-            }
-            System.out.println(arr);
+                n = newNum;
         }
+        System.out.println(arr.size());
     }
 }
