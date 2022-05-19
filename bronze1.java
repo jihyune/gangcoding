@@ -204,7 +204,7 @@ class bronze1_7 {
 }
 
 // 1977번 완전 제곱수
-public class bronze1 {
+class bronze1_8 {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -233,5 +233,17 @@ public class bronze1 {
             System.out.println(num.get(0));
         }
 
+    }
+}
+
+public class bronze1 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String A = "";
+        for (int i = 1; i <= n; i++) {
+            A += i;
+        }
+        System.out.print(A);
     }
 }
