@@ -64,38 +64,41 @@ package gangcoding;
 
 
 //2775 부녀회장이 될테야//
-//import java.util.Scanner;
-//import java.util.Arrays;
-//public class bronze1_1 {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//
-//        int N = sc.nextInt();
-//        for (int i = 0; i < N ; i++){
-//            int k = sc.nextInt();
-//            int n = sc.nextInt();
-//
-//            int[] floor = new int[n];
-//            for (int j = 0; j < n ; j++){
-//                floor[j] = j+1;
-//            }
-//
-//            int[] newfloor = new int[n];
-//
-//            for(int j = 0 ; j < k ; j++){
-//                for(int t = 0; t < n; t++){
-//                    for(int s = 0; s <= t; s++){
+import java.util.Scanner;
+import java.util.Arrays;
+public class bronze1_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        for (int i = 0; i < N ; i++){
+            int k = sc.nextInt();
+            int n = sc.nextInt();
+
+            int[] floor = new int[n];
+            for (int j = 0; j < n ; j++){
+                floor[j] = j+1;
+            }
+
+
+
+            for(int j = 0 ; j < k ; j++){
+
+                int[] newfloor = new int[n];
+
+                for(int t = 0; t < n; t++){
+                    for(int s = 0; s <= t; s++){
 //                        System.out.println(floor[s]);
-//                        newfloor[t] += floor[s];
-//                    }
-//                }
+                        newfloor[t] += floor[s];
+                    }
+                }
 //                System.out.println(Arrays.toString(newfloor));
-//                floor = newfloor;
-//            }
-//            System.out.println(floor[n-1]);
-//        }
-//    }
-//}
+                floor = newfloor;
+            }
+            System.out.println(floor[n-1]);
+        }
+    }
+}
 
 //1193 분수찾기//
 //import java.util.Scanner;
@@ -129,31 +132,31 @@ package gangcoding;
 //}
 
 //11050 이항계수1//
-import java.util.Scanner;
-public class bronze1_1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-
-        int up = 1;
-        int down = 1;
-
-        for(int i = 1; i <= n; i++){
-            up *= i;
-        }
-
-        for(int i = 1; i<=m ; i++){
-            down *= i;
-        }
-
-        for(int i = n-m; i>=1 ; i--){
-            down *= i;
-        }
-
-        int N = up/down;
-
-        System.out.println(N);
-    }
-}
+//import java.util.Scanner;
+//public class bronze1_1 {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        int n = sc.nextInt();
+//        int m = sc.nextInt();
+//
+//        int up = 1;
+//        int down = 1;
+//
+//        for(int i = 1; i <= n; i++){
+//            up *= i;
+//        }
+//
+//        for(int i = 1; i<=m ; i++){
+//            down *= i;
+//        }
+//
+//        for(int i = n-m; i>=1 ; i--){
+//            down *= i;
+//        }
+//
+//        int N = up/down;
+//
+//        System.out.println(N);
+//    }
+//}
