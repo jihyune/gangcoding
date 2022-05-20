@@ -142,25 +142,32 @@ import java.util.*;
 
 
 //    2161 카드1 *****
-//public class jw_bronze_1 {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        int n = sc.nextInt();
-//        String A = "";
-//        for (int i = 1; i <= n; i++) {
-//            A += i;
-//        }
-//        System.out.print(A.charAt(0));
-//        while (A.length() > 2) {
-//            char c = A.charAt(1);
-//            A = A.substring(2);
-//            A += c;
-//            System.out.print(" " + A.charAt(0));
-//        }
-//        System.out.print(" " +
-//                A.charAt(1));
-//    }
-//}
+public class jw_bronze_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String A = "";
+        if (n==1){
+            System.out.print("1");
+        }
+        else {
+            for (int i = 1; i <= n; i++) {
+                A += i;
+            }
+            System.out.print(A.charAt(0));
+            while (A.length() > 2) {
+                String c = A.substring(1,2);
+                A = A.substring(2);
+                A += c;
+                System.out.print(" " + A.charAt(0));
+            }
+            System.out.print(" " +
+                    A.charAt(1));
+        }
+    }
+}
+
+// string 이라 10이상의 수를 넣으면 한 자리만 받아오는 오류
 
 //  2750 수 정렬하기
 //public class jw_bronze_1 {
