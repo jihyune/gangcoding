@@ -194,74 +194,273 @@ package gangcoding;
 //}
 
 //2941 크로아티아 알파벳//
-import java.util.Scanner;
-
-public class silver5 {
+//import java.util.Scanner;
 //
-//    static int count(String word, String x, int n) {
-//        int len = word.length();
-//        int cnt = 0;
-//        if (word.contains(x)) {
-//            word.replaceAll(x, "");
-//            int c = word.length();
-//            cnt += (len - c) / n;
+//public class silver5 {
+//
+////    static int count(String x, String y) {
+////        int cnt =0;
+////        if (x.equals(y)) {
+////            cnt++;
+////        }
+////
+////        return cnt;
+////    }
+//
+//    static String replace(String word, String s){
+//        word = word.replaceAll(s, "11");
+//        return word;
+//    }
+//
+//    static Integer count(int c, String word) {
+//        for (int i = 0; i < word.length(); i++) {
+//            if (word.substring(i, i + 1).equals("1")) {
+//                c++;
+//            }
+//            c /= 2;
+//        }
+//        return c;
+//    }
+//
+//
+//
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String word = sc.nextLine();
+//
+//
+//       int cnt = 0;
+//       word = word.replaceAll("dz=", "111");
+//        for (int i = 0; i < word.length(); i++) {
+//            if (word.substring(i, i + 1).equals("1")) {
+//                cnt++;
+//            }
+//            cnt /= 3;
 //        }
 //
-//        return cnt;
+//       replace(word, "c=");
+//       count(cnt, word);
+//       replace(word, "c-");
+//       count(cnt, word);
+//       replace(word, "lj");
+//       count(cnt, word);
+//            System.out.println(word);
+//
+////        replace(cnt, word, "c-");
+////        replace(cnt, word, "d-");
+////        replace(cnt, word, "lj");
+////        System.out.println(word);
+////        replace(cnt, word, "nj");
+////        replace(cnt, word, "s=");
+////        replace(cnt, word, "z=");
+////        replace(cnt, word, "c=");
+//
+//        word.replace("1", "");
+//
+//        cnt = cnt+word.length();
+//
+////       word = word.replaceAll("c=", "11");
+////        for(int i=0;i<len;i++){
+////            count("1", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////       word = word.replaceAll("c-", "22");
+////        for(int i=0;i<len;i++){
+////            count("2", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////       word = word.replaceAll("d-", "33");
+////        for(int i=0;i<len;i++){
+////            count("3", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////       word = word.replaceAll("lj", "44");
+////        for(int i=0;i<len;i++){
+////            count("4", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////       word = word.replaceAll("nj", "55");
+////        for(int i=0;i<len;i++){
+////            count("5", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////       word = word.replaceAll("s=", "66");
+////        for(int i=0;i<len;i++){
+////            count("6", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////        word = word.replaceAll("z=", "77");
+////        for(int i=0;i<len;i++){
+////            count("7", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+////
+////        word = word.replaceAll("c=", "88");
+////        for(int i=0;i<len;i++){
+////            count("8", word.substring(i,i+1));
+////        }
+////        cnt /= 2;
+//
+//
+//
+//        System.out.println(cnt);
+//
+//
 //    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String word = sc.nextLine();
-
-//       int c = count(word, "dz=", 3)+count(word, "c=", 2)+count(word, "c-", 2)
-//               +count(word, "d-", 2)+count(word, "lj", 2)+count(word, "nj", 2)
-//               +count(word, "s=", 2)+count(word, "z=", 2);
-
-       int len = word.length();
-       int count = 0;
-       word = word.replaceAll("dz=", "");
-       count += (len-word.length())/3;
-       len = word.length();
-
-       word = word.replaceAll("c=", "");
-       count += (len-word.length())/2;
-        len = word.length();
-
-       word = word.replaceAll("c-", "");
-        count += (len-word.length())/2;
-        len = word.length();
-
-       word = word.replaceAll("d-", "");
-        count += (len-word.length())/2;
-        len = word.length();
-
-       word = word.replaceAll("lj", "");
-        count += (len-word.length())/2;
-        len = word.length();
-        System.out.println(count);
-
-       word = word.replaceAll("nj", "");
-        count += (len-word.length())/2;
-        len = word.length();
-
-       word = word.replaceAll("s=", "");
-        count += (len-word.length())/2;
-        len = word.length();
-
-        word = word.replaceAll("z=", "");
-        count += (len-word.length())/2;
-        len = word.length();
-
-        word = word.replaceAll("c=", "");
-        count += (len-word.length())/2;
-
-        count += word.length();
-
-//       int sum = word.length()+c;
+//}
 
 
-        System.out.println(count);
+//8979 올림픽//
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//
+//public class silver5 {
+//
+//    static Integer getResult(String result, int i){
+//        int x = Integer.parseInt(result.substring(i,i+1));
+//        return x;
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        int n = sc.nextInt();
+//        int m = sc.nextInt();
+//
+//        sc.nextLine();
+//
+//        ArrayList<Integer> gold = new ArrayList<>();
+//        ArrayList<Integer> silver = new ArrayList<>();
+//        ArrayList<Integer> bronze = new ArrayList<>();
+//        ArrayList<Integer> getNation = new ArrayList<>();
+//
+//        for(int i = 0; i < n; i++){
+//            String result = sc.nextLine();
+//
+//            getNation.add(getResult(result, 0));
+//            gold.add(getResult(result, 2));
+//            silver.add(getResult(result, 4));
+//            bronze.add(getResult(result, 6));
+//        }
+//
+////        System.out.println(gold);
+////        System.out.println(silver);
+////        System.out.println(bronze);
+//
+//
+//        for ( int i = 0 ; i < n ; i++){
+//            if(getNation.get(i) == m){
+//                m = i;
+//            }
+//        }
+//         int count = 1;
+//         for(int i = 0 ; i < n ; i++){
+//
+//             if(gold.get(i) > gold.get(m)){
+//                 count++;
+//             } else if(gold.get(i) == gold.get(m)){
+//                 if(silver.get(i) > silver.get(m)){
+//                     count++;
+//                 } else if(silver.get(i) == silver.get(m)){
+//                     if(bronze.get(i) > bronze.get(m)){
+//                         count++;
+//                     }
+//                 }
+//             }
+//         }
+//
+//         System.out.println(count);
+//
+//    }
+//}
 
+//11723 집합//
+//import java.util.HashSet;
+//import java.io.*;
+//
+//
+//public class silver5 {
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        HashSet<Integer> S = new HashSet<>();
+//        HashSet<Integer> S0 = new HashSet<>();
+//
+//        for(int i = 0; i < n ; i++){
+//            String cmd = br.readLine();
+//            String[] command = cmd.split(" ");
+//            int x = Integer.parseInt(command[1]);
+//
+//            if(cmd.contains("add")){
+//                S.add(x);
+//            } else if(cmd.contains("check")){
+//                if(S.contains(x)){
+//                    bw.write("1");
+//                } else{
+//                    bw.write("0");
+//                }
+//            } else if(cmd.contains("remove")){
+//                if(S.contains(x)){
+//                    S.remove(x);
+//                }
+//            } else if(cmd.contains("toggle")){
+//                if(S.contains(x)){
+//                    S.remove(x);
+//                } else {
+//                    S.add(x);
+//                }
+//            } else if(cmd.contains("all")){
+//                for(int j = 1; j <= 20; j++){
+//                    S.add(j);
+//                }
+//            } else if(cmd.contains("empty")){
+//                S = S0;
+//            }
+//            bw.newLine();
+//        }
+//        bw.close();
+//    }
+//}
+
+//17478 재귀함수//
+import java.util.HashSet;
+import java.io.*;
+
+
+public class silver5 {
+
+    static String wornl(){
+        String a = "\"재귀함수가 뭔가요?\"\n" +
+                "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\n" +
+                "마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\n" +
+                "그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"";
+
+        return a;
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            String a = "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.";
+
+        }
     }
 }
+
+
+
