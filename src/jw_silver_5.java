@@ -4,8 +4,9 @@ import java.io.*;
 
 public class jw_silver_5 {
 
-
-    //    int num(int a){
+// 4673 셀프넘버
+//
+//    int num(int a){
 //        int n = 0;
 //        while (a > 0){
 //            n += a % 10;
@@ -233,33 +234,134 @@ public class jw_silver_5 {
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int s = sc.nextInt();
-//        int a;
-//        int b;
-//        ArrayList arr1 = new ArrayList();
-//        ArrayList arr2 = new ArrayList();
-//        int[] arr3 = new int[s];
+//        int [][] arr = new int[s][2];
 //
 //        for (int i = 0; i < s; i++) {
-//            a = sc.nextInt();
-//            b = sc.nextInt();
-//            arr1.add(a);
-//            arr2.add(b);
+//            arr[i][0] = sc.nextInt();
+//            arr[i][1] = sc.nextInt();
+//        }
+//
+//
+//        for (int i = 0; i < s; i++){
+//            int count = 1;
+//            for (int j = 0; j < s; j++) {
+//                if (i == j) {
+//                    continue;
+//                }
+//                if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {
+//                    count++;
+//                }
+//            }
+//            System.out.print(count + " ");
 //        }
 //    }
+
 //
+//    11723 집합
+
+//        public static void main(String[] args) {
+//            Scanner sc = new Scanner(System.in);
+//            int s = sc.nextInt();
+//            ArrayList arr = new ArrayList();
+//            String[] check = new String[s];
+//            int[] num = new int[s];
 //
-//    int max(ArrayList arr1, ArrayList arr2, int s){
-//        for (int j = 0; j < s-1; j++) {
-//            for (int k = j+1; k < s; k++){
-//                if ((arr1.indexOf(j) > arr1.indexOf(k)) && (arr2.indexOf(j) > arr2.indexOf(k))){
-//                    arr3[0] = j;
+//            for (int i = 0; i < s; i++) {
+//                check[i] = sc.nextLine();
+//                if (Objects.equals(check[i], "add") || Objects.equals(check[i], "remove") || Objects.equals(check[i], "check") || Objects.equals(check[i], "toggle")){
+//                    num[i] = sc.nextInt();
+//                }
+//            }
+//
+//            for (int i = 0; i < s; i++) {
+//                switch (check[i]) {
+//                    case "add":
+//                        if (arr.contains(num[i])) {
+//                            continue;
+//                        } else {
+//                            arr.add(num[i]);
+//                        }
+//                        break;
+//                    case "remove":
+//                        if (arr.contains(num[i])){
+//                            arr.remove(num[i]);
+//                        }
+//                        break;
+//                    case "check":
+//                        if (arr.contains(num[i])){
+//                            System.out.println("1");
+//                        }
+//                        else {
+//                            System.out.println("0");
+//                        }
+//                        break;
+//                    case "toggle":
+//                        if (arr.contains(num[i])){
+//                            arr.remove(num[i]);
+//                        }
+//                        else {
+//                            arr.add(num[i]);
+//                        }
+//                        break;
+//                    case "all":
+//                        for (int j = 0; j < 20; j++){
+//                            arr.add(j+1);
+//                        }
+//                        break;
+//                    case "empty":
+//                        arr.clear();
+//                        break;
+//                }
+//            }
+//            sc.close();
+//        }
+
+//    8979 올림픽
+//public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int a = sc.nextInt();
+//        int b = sc.nextInt();
+//        int[][] arr = new int[a][4];
+//        int[] count = new int[a];
+//
+//        for (int i = 0; i < a; i ++){
+//            count[i] = 1;
+//        }
+//
+//        for (int i = 0; i < a; i++) {
+//            arr[i][0] = sc.nextInt();
+//            arr[i][1] = sc.nextInt();
+//            arr[i][2] = sc.nextInt();
+//            arr[i][3] = sc.nextInt();
+//        }
+//
+//        for (int i = 0; i < a; i++){
+//            for (int j = 0; j < a; j++) {
+//                if (i == j) {
+//                    continue;
+//                }
+//                if (arr[i][1] < arr[j][1]) {
+//                    count[i]++;
+//                }
+//                else if (arr[i][1] == arr[j][1]){
+//                    if (arr[i][2] < arr[j][2]){
+//                        count[i]++;
+//                    }
+//                    else if (arr[i][2] == arr[j][2]){
+//                        if (arr[i][3] < arr[j][3]){
+//                            count[i]++;
+//                        }
+//                    }
+//                    else {
+//
+//                    }
 //                }
 //                else {
-//                    continue;
 //                }
 //            }
 //        }
-//        max (arr1)
+//    System.out.print(count[b-1]);
 //    }
-//}
+
+}
 
