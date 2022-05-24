@@ -2,6 +2,7 @@ package gangcoding;
 import java.lang.reflect.Array;
 import java.util.*;
 
+
 /*
 class silver5_1 {
     int selfnum(int num){
@@ -339,5 +340,63 @@ class silver5_9 {
 
         System.out.println(count);
 
+    }
+}
+public class silver5{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'c') {
+                if ((s.charAt(i + 1) == '=') || (s.charAt(i + 1) == '-')) {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else {
+                    count++;
+                }
+            } else if (s.charAt(i) == 'd') {
+                if (s.charAt(i + 1) == '-') {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else if ((s.charAt(i + 1) == 'z') && (s.charAt(i + 2) == '=')) {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 2);
+                } else {
+                    count++;
+                }
+            } else if (s.charAt(i) == 'l') {
+                if (s.charAt(i + 1) == 'j') {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else {
+                    count++;
+                }
+            } else if (s.charAt(i) == 'n') {
+                if (s.charAt(i + 1) == 'j') {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else {
+                    count++;
+                }
+            } else if (s.charAt(i) == 's') {
+                if (s.charAt(i + 1) == '=') {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else {
+                    count++;
+                }
+            } else if (s.charAt(i) == 'z') {
+                if (s.charAt(i + 1) == '=') {
+                    count++;
+                    s = s.substring(0,i) + s.substring(i + 1);
+                } else {
+                    count++;
+                }
+            } else {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
