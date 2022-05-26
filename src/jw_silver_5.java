@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+import java.sql.Array;
 import java.util.*;
 import java.io.*;
 
@@ -360,7 +360,11 @@ public class jw_silver_5 {
 //                }
 //            }
 //        }
-//    System.out.print(count[b-1]);
+//        for (int i=0; i<a; i++){
+//            if (arr[i][0] == b){
+//                System.out.print(count[i]);
+//            }
+//        }
 //    }
 
 }
