@@ -61,25 +61,18 @@
 
 #2346 풍선 터뜨리기
 
-n = int(input())
-balloonHave = list(map(int, input().split()))
-answer=[]
-numbers = [ i for i in range(1, n+1) ]
+# n = int(input())
+# balloonHave = list(map(int, input().split()))
+# answer=[]
+# numbers = [ i for i in range(1, n+1) ]
 
 
-x=0
-for i in range(n) :
-    index = x
-    answer.append(numbers[index])
-    index += balloonHave[index]
-    numbers.pop(index)
+# x=0
+# for i in range(n) :
+#     index = x
+#     answer.append(numbers[index])
+#     index += balloonHave[index]
+#     numbers.pop(index)
 
-    print(numbers)
-    print(answer)
-
-
-
-
-
-
-    
+#     print(numbers)
+#     print(answer)
