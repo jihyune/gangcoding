@@ -1,94 +1,3 @@
-# import sys
-
-# class ListNode:
-# 	def __init__(self, newItem, nextNode:'ListNode'):
-# 		self.item = newItem
-# 		self.next = nextNode
-
-# class LinkedListBasic:
-# 	def __init__(self):
-# 		self.__head = ListNode('dummy', None)
-# 		self.__numItems = 0
-
-# 	def insert(self, i:int, newItem):
-# 		if i >= 0 and i <= self.__numItems:
-# 			prev = self.__getNode(i - 1)
-# 			newNode = ListNode(newItem, prev.next)
-# 			prev.next = newNode
-# 			self.__numItems += 1
-
-# 	def append(self, newItem):
-# 		prev = self.__getNode(self.__numItems - 1)
-# 		newNode = ListNode(newItem, prev.next)
-# 		prev.next = newNode
-# 		self.__numItems += 1
-
-
-# 	def pop(self, i:int):  
-# 		if (i >= 0 and i <= self.__numItems-1):
-# 			prev = self.__getNode(i - 1)
-# 			curr = prev.next
-# 			prev.next = curr.next
-# 			retItem = curr.item
-# 			self.__numItems -= 1
-# 			return retItem
-# 		else:
-# 			return None
-	
-# 	def size(self) -> int:
-# 		return self.__numItems
-
-# 	def clear(self):
-# 		self.__head = ListNode("dummy", None)
-# 		self.__numItems = 0
-
-# 	def __getNode(self, i:int) -> ListNode:
-# 		curr = self.__head 
-# 		for index in range(i+1):
-# 			curr = curr.next
-# 		return curr
-
-# 	def printList(self):
-# 		curr = self.__head.next 
-# 		while curr != None:
-# 			print(curr.item, end = '')
-# 			curr = curr.next
-# 		print()
-
-
-# n=int(sys.stdin.readline())
-# cursor = 0;
-
-# for i in range(n):
-#     list = LinkedListBasic()
-#     str = sys.stdin.readline().strip()
-#     for j in range (len(str)):
-#         if str[j] == "<":
-#             if cursor >0 :
-#                 cursor-=1;
-#         elif str[j] == ">":
-#             if cursor < list.size():
-#                 cursor+=1;
-#         elif str[j] == "-":
-#             if cursor > 0:
-#                 list.pop(cursor-1)
-#                 cursor-=1
-#         else :
-#             list.insert(cursor, str[j])
-#             cursor+=1
-#     list.printList();
-
-
-# 1
-# jk<<<a>>d
-# ajkd
-
-# 2
-# jk<<a 
-# ajk
-# jk<<<a>>d
-# ad
-
 import sys
 
 class Node:
@@ -126,10 +35,7 @@ class Link:
         prv = cur.prev.prev
         cur.prev.prev.next = cur
         cur.prev = cur.prev.prev
-        if prv is self.head:
-            return self.head.next
-        else:
-            return cur
+        return cur
 
 
 answers = []
@@ -165,3 +71,68 @@ s = ""
 for stc in answers:
     s += (''.join(stc) + '\n')
 print(s)
+
+# class ListNode:
+# 	def __init__(self, newItem, nextNode:'ListNode'):
+# 		self.item = newItem
+# 		self.next = nextNode
+
+# class LinkedListBasic:
+#     def __init__(self):
+#         self.__head = ListNode('dummy', None)
+#         self.__numItem = 0
+        
+#     def insert(self, i:int, newItem):
+#         prev = self.__getNode(i - 1)
+#         newNode = ListNode(newItem, prev.next)
+#         prev.next = newNode
+#         self.__numItem += 1
+#         return newNode
+
+#     def pop(self, i:int):
+#         prev = self.__getNode(i - 1)
+#         curr = prev.next
+#         prev.next = curr.next
+#         self.__numItem -= 1
+#         return curr.item
+        
+#     def __getNode(self, i:int) -> ListNode:
+#         curr = self.__head  # 더미 헤드, index: -1
+#         for _ in range(i+1):
+#             curr = curr.next
+#         return curr
+
+#     def size(self) -> int:
+#         return self.__numItem
+
+#     def printList(self):
+#         curr = self.__head.next 
+#         while curr != None:
+#             print(curr.item, end = '')
+#             curr = curr.next
+
+
+# n = int(sys.stdin.readline())
+
+# for i in range(n):
+#     list = LinkedListBasic()
+#     str = sys.stdin.readline().strip()
+#     cursor = -1
+#     for j in range (len(str)):
+#         if str[j] == "<":
+#             if cursor > -1 :
+#                 cursor -= 1
+#         elif str[j] == ">":
+#             if cursor < list.size()-1:
+#                 cursor+=1;
+#         elif str[j] == "-":
+#             if cursor > -1:
+#                 list.pop(cursor)
+#                 cursor-=1
+#         else :
+#             list.insert(cursor+1, str[j])
+#             cursor+=1
+#     list.printList();
+#     print()
+
+
