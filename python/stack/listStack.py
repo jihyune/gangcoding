@@ -26,4 +26,6 @@ class ListStack:
 			print(self.__stack[i], end = ' ')
 		print()
 
+	def size(self):
+		return len(self.__stack)
 # 코드 6-6
