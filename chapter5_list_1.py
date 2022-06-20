@@ -7,6 +7,12 @@ class LinkedList:
     def __init__(self):
         self.__head = ListNode('dummy', None)
         self.__numItems = 0
+
+    def __getNode(self, i:int) -> ListNode:
+        curr = self.__head
+        for index in range(i+1):
+            curr = curr.next
+        return curr
     
     def insert(self, i:int, newItem):
         if i>=0 and i<= self.__numItems:
@@ -105,6 +111,11 @@ class LinkedList:
         self.clear()
         for index in range(len(a)):
             self.append(a[index])
-    
 
+    def printList(self):
+        curr = self.__head.next
+        while curr != None:
+            print(curr.item, end = '')
+            curr = curr.next
+        print()
 
