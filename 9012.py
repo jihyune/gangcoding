@@ -19,6 +19,8 @@ class ListStack:
 	def isEmpty(self) -> bool:
 		return not bool(self.__stack)
 
+	def popAll(self):
+		self.__stack.clear()
 
 n = int(sys.stdin.readline().rstrip())
 stack = ListStack()
@@ -29,7 +31,7 @@ for i in range(n):
     for j in range(len(vps)):
         if stack.isEmpty():
             if vps[j] == ")":
-                print("NO")
+                stack.push(vps[j])
                 break
             else:
                 stack.push(vps[j])
@@ -42,3 +44,4 @@ for i in range(n):
         print("YES")
     else:
         print("NO")
+    stack.popAll()
