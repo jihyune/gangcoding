@@ -1,4 +1,4 @@
-from listNode import ListNode
+from LinkedList.listNode import ListNode
 
 class LinkedListBasic:
 	def __init__(self):

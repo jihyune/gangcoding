@@ -20,10 +20,14 @@ class Heap:
 	# [알고리즘 8-2] 구현: 힙에서 원소 삭제하기
 	def deleteMax(self):
 		# heap is in self.__A[0...len(self.__A)-1]
-		if (not self.isEmpty()):
+		if self.size() > 1:
 			max = self.__A[0]
 			self.__A[0] = self.__A.pop() # *.pop(): 리스트의 끝원소 삭제 후 원소 리턴
 			self.__percolateDown(0)
+			return max
+		elif self.size() == 1:
+			max = self.__A[0]
+			self.__A[0] = self.__A.pop()
 			return max
 		else:
 			return None
