@@ -40,7 +40,7 @@ class Heap:
 		child = 2 * i + 1  # left child
 		right = 2 * i + 2  # right child
 		if (child <= len(self.__A)-1):
-			if (right <= len(self.__A)-1 and self.__A[child] > self.__A[right]):
+			if (right <= len(self.__A)-1 and self.__A[child] < self.__A[right]):
 				child = right  # index of larger child
 			if self.__A[i] > self.__A[child]:
 				self.__A[i], self.__A[child] = self.__A[child], self.__A[i]
@@ -67,17 +67,15 @@ class Heap:
 # 코드 8-8
 
 n = int(sys.stdin.readline())
-h = Heap()
+l = Heap()
+r = Heap()
 
 for i in range(n):
     num = int(sys.stdin.readline())
 
-    if num == 0:
-        if h.size() == 0:
-            print(0)
-        else:
-            print(h.min())
-            h.deleteMin()
-
+    if (l.size() == r.size()):
+        l.insert(num)
     else:
-        h.insert(num)
+        r.insert(num)
+    
+    if l[-1] 

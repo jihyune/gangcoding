@@ -1,5 +1,3 @@
-import sys
-
 class Heap:
 	def __init__(self, *args):
 		if len(args) != 0:
@@ -22,7 +20,7 @@ class Heap:
 	# [알고리즘 8-2] 구현: 힙에서 원소 삭제하기
 	def deleteMin(self):
 		# heap is in self.__A[0...len(self.__A)-1]
-		if (self.size() > 1):
+		if (self.size() > 1)):
 			min = self.__A[0]
 			self.__A[0] = self.__A.pop() # *.pop(): 리스트의 끝원소 삭제 후 원소 리턴
 			self.__percolateDown(0)
@@ -65,19 +63,3 @@ class Heap:
 		return len(self.__A)
 
 # 코드 8-8
-
-n = int(sys.stdin.readline())
-h = Heap()
-
-for i in range(n):
-    num = int(sys.stdin.readline())
-
-    if num == 0:
-        if h.size() == 0:
-            print(0)
-        else:
-            print(h.min())
-            h.deleteMin()
-
-    else:
-        h.insert(num)

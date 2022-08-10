@@ -15,22 +15,22 @@ class Heap:
 	# 스며오르기
 	def __percolateUp(self, i:int):
 		parent = (i - 1) // 2
-		if i > 0 and self.__A[i] < self.__A[parent]:
+		if i > 0 and self.__A[i] > self.__A[parent]:
 			self.__A[i], self.__A[parent] = self.__A[parent], self.__A[i]
 			self.__percolateUp(parent)
 
 	# [알고리즘 8-2] 구현: 힙에서 원소 삭제하기
-	def deleteMin(self):
+	def deleteMax(self):
 		# heap is in self.__A[0...len(self.__A)-1]
 		if (self.size() > 1):
-			min = self.__A[0]
+			max = self.__A[0]
 			self.__A[0] = self.__A.pop() # *.pop(): 리스트의 끝원소 삭제 후 원소 리턴
 			self.__percolateDown(0)
-			return min
+			return max
 		elif (self.size() == 1):
-			min = self.__A[0]
+			max = self.__A[0]
 			self.__A.pop()
-			return min
+			return max
 		else:
 			return None
 
@@ -40,13 +40,13 @@ class Heap:
 		child = 2 * i + 1  # left child
 		right = 2 * i + 2  # right child
 		if (child <= len(self.__A)-1):
-			if (right <= len(self.__A)-1 and self.__A[child] > self.__A[right]):
+			if (right <= len(self.__A)-1 and self.__A[child] < self.__A[right]):
 				child = right  # index of larger child
-			if self.__A[i] > self.__A[child]:
+			if self.__A[i] < self.__A[child]:
 				self.__A[i], self.__A[child] = self.__A[child], self.__A[i]
 				self.__percolateDown(child)
 
-	def min(self):
+	def max(self):
 		return self.__A[0]
 
 	# 힙 만들기
@@ -65,19 +65,26 @@ class Heap:
 		return len(self.__A)
 
 # 코드 8-8
+n, k = map(int, sys.stdin.readline().split())
 
-n = int(sys.stdin.readline())
-h = Heap()
+weight = []
+value = []
+bag = Heap()
 
 for i in range(n):
-    num = int(sys.stdin.readline())
+    m = int(sys.stdin.readline())
+    v = int(sys.stdin.readline())
 
-    if num == 0:
-        if h.size() == 0:
-            print(0)
-        else:
-            print(h.min())
-            h.deleteMin()
+    weight[i] = m
+    value[i] = v
 
-    else:
-        h.insert(num)
+for i in range(k):
+    c = int(sys.stdin.readline())
+
+    bag.insert(c)
+
+for i in range(n):
+
+    max = value[0]
+    if (value[i] >= max):
+        max = value[i]
