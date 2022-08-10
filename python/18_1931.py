@@ -20,6 +20,8 @@ count = 0
 
 for i in range(n):
     l = Q[i] - P[i]
+    if l == 0:
+        count = count + 1
 
     for j in range(P[i], Q[i]):
         if (a[j] > l) or (a[j] == 0):
