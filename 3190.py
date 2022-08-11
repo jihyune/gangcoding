@@ -22,9 +22,9 @@ def start():
     while True:
         y, x = y + dy[direction], x + dx[direction]
         if 0 <= y < N and 0 <= x < N and arr[y][x] != 2:
-            if not arr[y][x] == 1: 
+            if not arr[y][x] == 1:
                 temp_y, temp_x = visited.popleft()
-                arr[temp_y][temp_x] = 0 
+                arr[temp_y][temp_x] = 0     
             arr[y][x] = 2
             visited.append([y, x])
             if time in times.keys():
@@ -32,7 +32,6 @@ def start():
             time += 1
         else:
             return time
-
 
 if __name__ == "__main__":
     N = int(input())
